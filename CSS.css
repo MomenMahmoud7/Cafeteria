@@ -1,0 +1,318 @@
+h1
+{
+    margin: 0;
+    font-size: 60pt;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(rgb(200, 200, 200) , white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2
+{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24pt;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(200, 200, 200) , white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h3
+{
+    margin: 0;
+    font-size: 36pt;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(200, 200, 200) , white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------- */
+/* Home page layout */
+body
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+.layout
+{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.body
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.check
+{
+    /* display: flex; */
+    flex-grow: none;
+    /* flex-shrink: none; */
+    /* flex-wrap: wrap; */
+    min-width: 400px;
+    height: 620px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.sticky-check
+{
+    position: fixed;
+    top: 90px;
+}
+.sticky-check + .body
+{
+    margin-left: 460px
+}
+.qty
+{
+    text-align: center;
+    font-size: 14pt;
+    width: 60px;
+    height: 40px;
+    outline:0;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+}
+.add
+{
+    text-align: center;
+    font-size: 18pt;
+    width: 40px;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: orange;
+    vertical-align: bottom;
+}
+
+/* ---------------------------- */
+/* Header of all pages */
+.header
+{
+    display: flex;
+    top: 0;
+    height: 300px;
+    background-image: url("Header.jpg");
+    background-position:center center;
+    background-size: cover;
+    text-align: center;
+}
+.header a
+{
+    margin: auto;
+    text-decoration: none;
+}
+
+/* ---------------------------- */
+/* Footer of all pages */
+.footer 
+{
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+}
+
+/* ---------------------------- */
+/* Navbar of all pages */
+#topnav 
+{
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+}
+#topnav a 
+{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: bolder;
+    border-bottom: 8px solid white;
+}
+#topnav a:hover 
+{
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-bottom: 8px solid orange;
+}
+.sticky 
+{
+    position: fixed;
+    top: 0;
+}
+.sticky + .layout
+{
+    margin-top: 90px;
+}
+.sticky + .signin-form
+{
+    margin-top: 110px;
+}
+.sticky + .signup-form
+{
+    margin-top: 110px;
+}
+
+/* ---------------------------- */
+/* Sign in and sign up form */
+.signin-form
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    padding-top: 20px;
+    width: 340px;
+    font-size: 12pt;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+}
+.signup-form
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    padding-top: 20px;
+    min-width: 340px;
+    max-width: 680px;
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 12pt;
+}
+form div
+{
+    width: 300px;
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 12pt;
+    color: white;
+}
+.input
+{
+    padding-left: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 12pt;
+    outline: 0;
+}
+.warning
+{
+    font-size: 10pt;
+    height: 20px;
+    margin: 0;
+    color: red;
+    padding-left: 20px;
+}
+form a
+{
+    text-decoration: none;
+    color:rgb(161, 161, 161);
+}
+form a:hover
+{
+    color: orange;
+}
+form button
+{
+    border: 0;
+    background-color: orange;
+    color: white;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    font-size: 12pt;
+    cursor: pointer;
+    font-weight: 600;
+    outline: 0;
+}
+form button:hover 
+{
+    background-color: orange;
+    color: black;
+}
+
+/* ---------------------------- */
+/* Product card */
+.product
+{
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    height: fit-content;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.120);
+}
+.product img
+{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.title
+{
+    font-size: 14pt;
+    font-weight: bolder;
+    margin: 20px;
+}
+.description
+{
+    flex-wrap: wrap;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.price-box
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.price
+{
+    width: 80px;
+    text-align: right;
+    padding: 10px;
+}
+.currency
+{
+    width: 80px;
+    text-align: left;
+    padding: 10px;
+}
+.product button
+{
+    border: 0;
+    background-color: orange;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 12pt;
+    cursor: pointer;
+    font-weight: 600;
+    outline-color: orange;
+}
+.product button:hover
+{
+    background-color: orange;
+    color: black;
+}
