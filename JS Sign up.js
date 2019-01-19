@@ -1,10 +1,10 @@
-let navbar = document.getElementById("topnav");
-let sticky = navbar.offsetTop;
+let navigationBar = document.getElementById("navigation-bar");
+let sticky = navigationBar.offsetTop;
 window.onscroll = function () {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navigationBar.classList.add("sticky");
   } else {
-    navbar.classList.remove("sticky");
+    navigationBar.classList.remove("sticky");
   }
 };
 
