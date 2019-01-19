@@ -47,6 +47,8 @@ function create (elementType , elementSrc , elementClass , elementId , elementPa
   newElement.addEventListener(elementEvent , elementFunction);
 }
 
+let total=[];
+
 for ( i=0 ; i < drinks.length ; i++)
 {
   let drinkId = drinks[i].drinkId;
@@ -63,6 +65,17 @@ for ( i=0 ; i < drinks.length ; i++)
   let checkDrinkPrice = drinks[i].checkDrinkPrice;
   let j=1;
 
+  function checkFinalPrice(x)
+  {
+    total.push(x);
+    final=total.reduce(finalLast,0);
+    function finalLast(a,b)
+    {
+      return a+b;
+    }
+  }
+
+
 // ------------------------------------------
   function createCheckDrink ()
   {
@@ -76,6 +89,8 @@ for ( i=0 ; i < drinks.length ; i++)
       if (j>1)
       {
         --j;
+        (checkFinalPrice(-price));
+        document.getElementById("check-total-price").innerText  = final;
         document.getElementById(checkDrinkPrice).innerText  = (j) * price;
         document.getElementById(checkDrinkQuantity).innerText = (j);
       }
@@ -93,6 +108,8 @@ for ( i=0 ; i < drinks.length ; i++)
     function ()
     {
       j++;
+      (checkFinalPrice(price));
+      document.getElementById("check-total-price").innerText = final;
       document.getElementById(checkDrinkPrice).innerText  = (j) * price;
       document.getElementById(checkDrinkQuantity).innerText = (j);
     }));
@@ -103,14 +120,14 @@ for ( i=0 ; i < drinks.length ; i++)
     if (document.getElementById("check-total-price")== null)
     {
       (create("div" , "" , "title" , "check-total-price-title" , "check" , "Total Price"));
-      (create("div" , "" , "check-total-price" , "check-total-price" , "check" , price));
+      (create("div" , "" , "check-total-price" , "check-total-price" , "check" , final));
     }
     else
     {
       document.getElementById("check-total-price-title").parentNode.removeChild(document.getElementById("check-total-price-title"));
       document.getElementById("check-total-price").parentNode.removeChild(document.getElementById("check-total-price"));
       (create("div" , "" , "title" , "check-total-price-title" , "check" , "Total Price"));
-      (create("div" , "" , "check-total-price" , "check-total-price" , "check" , price));
+      (create("div" , "" , "check-total-price" , "check-total-price" , "check" , final));
     }
   }
 
@@ -119,6 +136,7 @@ for ( i=0 ; i < drinks.length ; i++)
   {
     if (document.getElementById("check") == null )
     {
+      (checkFinalPrice(price));
       (create("div" , ""  , "check" , "check" , "layout" , "" , ));
       (create("h3" , "" , "" , "" , "check" , "Check"));
       var before = document.getElementById('check');
@@ -129,6 +147,7 @@ for ( i=0 ; i < drinks.length ; i++)
     }
     else if (document.getElementById(checkDrinkId) == null)
     {
+      (checkFinalPrice(price));
       (createCheckDrink());
       (createTotalPrice());
     }
