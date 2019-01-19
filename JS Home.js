@@ -47,9 +47,9 @@ function create (elementType , elementSrc , elementClass , elementId , elementPa
   newElement.addEventListener(elementEvent , elementFunction);
 }
 
-let total=[];
+let total = [];
 
-for ( i=0 ; i < drinks.length ; i++)
+for (let i=0 ; i < drinks.length ; i++)
 {
   let drinkId = drinks[i].drinkId;
   let image = drinks[i].image;
@@ -65,16 +65,18 @@ for ( i=0 ; i < drinks.length ; i++)
   let checkDrinkPrice = drinks[i].checkDrinkPrice;
   let j=1;
 
+  // Do not define functions inside loops
   function checkFinalPrice(x)
   {
+    console.log(i)
     total.push(x);
+    // if you do not use let or const the variable get created in the global scope (search in this point)
     final=total.reduce(finalLast,0);
     function finalLast(a,b)
     {
       return a+b;
     }
   }
-
 
 // ------------------------------------------
   function createCheckDrink ()
