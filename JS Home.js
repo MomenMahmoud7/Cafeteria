@@ -52,7 +52,7 @@ function create (elementType, elementSrc, elementClass, elementId, elementParent
   newElement.innerText = elementTextInside;
   newElement.addEventListener (elementEvent, elementFunction);
 }
-<<<<<<< HEAD
+
 let total = [];
 function checkTotalPrice (drinkPrice)
 {
@@ -63,16 +63,9 @@ function checkTotalPrice (drinkPrice)
     return first + second;
   }
 }
-for (let i = 0 ; i < drinks.length ; i++)
-=======
-
-let total = [];
 
 for (let i=0 ; i < drinks.length ; i++)
-<<<<<<< HEAD
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
-=======
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
+
 {
   let drinkId = drinks[i].drinkId;
   let image = drinks[i].image;
@@ -97,23 +90,10 @@ for (let i=0 ; i < drinks.length ; i++)
   (create ("div", "", "currency", "", priceBox, currency));
   (create ("button", "", "button", button, drinkId, "Get", "click", getClick));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   function getClick () 
   {
     if (document.getElementById ("check") == null)
-=======
-=======
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
-  // Do not define functions inside loops
-  function checkFinalPrice(x)
-  {
-    console.log(i)
-    total.push(x);
-    // if you do not use let or const the variable get created in the global scope (search in this point)
-    final=total.reduce(finalLast,0);
-    function finalLast(a,b)
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
+
     {
       (checkTotalPrice (price));
       (create ("div", "", "check", "check", "layout", ""));
@@ -124,7 +104,6 @@ for (let i=0 ; i < drinks.length ; i++)
       (createCheckDrink ());
       (createTotalPrice ());
     }
-<<<<<<< HEAD
     else if (document.getElementById (checkDrinkId) == null)
     {
       (checkTotalPrice (price));
@@ -133,14 +112,6 @@ for (let i=0 ; i < drinks.length ; i++)
     }
   };
 
-<<<<<<< HEAD
-=======
-  }
-
-=======
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
-// ------------------------------------------
->>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
   function createCheckDrink ()
   {
     (create ("div", "", "check-drink", checkDrinkId, "check", ""));
