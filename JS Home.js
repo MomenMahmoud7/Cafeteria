@@ -69,6 +69,9 @@ for (let i = 0 ; i < drinks.length ; i++)
 let total = [];
 
 for (let i=0 ; i < drinks.length ; i++)
+<<<<<<< HEAD
+>>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
+=======
 >>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
 {
   let drinkId = drinks[i].drinkId;
@@ -95,10 +98,13 @@ for (let i=0 ; i < drinks.length ; i++)
   (create ("button", "", "button", button, drinkId, "Get", "click", getClick));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   function getClick () 
   {
     if (document.getElementById ("check") == null)
 =======
+=======
+>>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
   // Do not define functions inside loops
   function checkFinalPrice(x)
   {
@@ -127,9 +133,12 @@ for (let i=0 ; i < drinks.length ; i++)
     }
   };
 
+<<<<<<< HEAD
 =======
   }
 
+=======
+>>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
 // ------------------------------------------
 >>>>>>> b2479d590672ed12fa79ff8d75a9143681612611
   function createCheckDrink ()
